@@ -11,20 +11,20 @@ import Home from '../pages/home';
 // const { store, persistor } = configureStore();
 
 const AppRouter = () => (
-      <BrowserRouter>
-        <div>
-          <Switch>
-            {/* 
+  <BrowserRouter>
+    <div>
+      <Switch>
+        {/* 
             <Route path="/courses/:id" component={CourseDetail} exact />
             
              */}
-            <Route path="/" component={Home} exact />
-            <Route path="/signup" component={Signup} />
-            <Route path="/login" component={Login} />
-            <Route path="*" component={NotFound} />
-          </Switch>
-        </div>
-      </BrowserRouter>
+        <Route path="/" component={Home} exact />
+        <Route path="/signup" component={Signup} />
+        <Route path="/login" component={Login} />
+        <Route path="*" component={NotFound} />
+      </Switch>
+    </div>
+  </BrowserRouter>
 );
 
 export default AppRouter;
