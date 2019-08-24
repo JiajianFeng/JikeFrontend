@@ -1,12 +1,14 @@
 module.exports = {
   parserOptions: {
-    ecmaVersion: 8,
+    ecmaVersion: 2018,
     ecmaFeatures: {
+      arrowFunctions: true,
       experimentalObjectRestSpread: true,
       jsx: true
     },
     sourceType: 'module'
   },
+  parser: 'babel-eslint',
   extends: [
     'airbnb',
     'prettier',
@@ -16,7 +18,11 @@ module.exports = {
   ],
   plugins: ['react'],
   rules: {
+    'no-empty': 0,
+    'no-console': 0,
     'react/jsx-filename-extension': 0,
+    'react/jsx-boolean-value': 0,
+    'react/forbid-prop-types': 0,
     'react/prop-types': 0, // TODO: We will be using flow typing instead (once app code stabilises more)
     'react/prefer-stateless-function': 0, // Sometimes we prefer PureComponent for performance reasons
     'react/destructuring-assignment': [2, 'always', { ignoreClassFields: true }],
@@ -43,11 +49,20 @@ module.exports = {
     'import/no-named-as-default': 0
   },
   globals: {
-    React: true
+    React: true,
+    fixture: true
   },
   env: {
     browser: true,
     jest: true,
     node: true
+  },
+  settings: {
+    'import/resolver': {
+      'babel-module': {
+        root: ['./'],
+        extensions: ['.js', '.tsx', '.ts']
+      }
+    }
   }
 };

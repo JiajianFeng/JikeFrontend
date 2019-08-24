@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Button, Grid, Typography } from '@material-ui/core';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
-import { withStyles } from '@material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import withLayout from '../lib/withLayout';
 import restClient from '../lib/restClient';
 
@@ -97,7 +97,7 @@ class LoginPage extends Component {
 
           <Grid container justify="center">
             <Grid item xs={12}>
-              <ValidatorForm className={classes.loginForm} ref="form" onSubmit={this.handleSubmit}>
+              <ValidatorForm className={classes.loginForm} onSubmit={this.handleSubmit}>
                 <TextValidator
                   required
                   fullWidth

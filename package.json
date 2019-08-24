@@ -1,35 +1,52 @@
 {
-  "name": "jikefrontend",
+  "name": "project-frontend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "prettier": "prettier \"{,**/}*.js\" --write",
-    "precommit": "lint-staged",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JiajianFeng/JikeFrontend.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JiajianFeng/JikeFrontend/issues"
-  },
-  "homepage": "https://github.com/JiajianFeng/JikeFrontend#readme",
   "devDependencies": {
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.18.2",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "lint-staged": "^9.2.1",
-    "prettier": "^1.18.2",
-    "react-scripts": "^3.1.1"
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^3.0.4",
+    "jest": "^24.8.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1",
+    "react-scripts": "^1.1.4",
+    "react-test-renderer": "^16.8.6"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "@material-ui/styles": "^4.3.3",
+    "axios": "^0.18.0",
+    "config": "^3.1.0",
+    "lodash": "^4.17.11",
+    "material-ui-chip-input": "^1.0.0",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-dropzone": "^10.1.5",
+    "react-material-ui-form-validator": "^2.0.8",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "react-toastify": "^5.3.2",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "testcafe": "^1.4.1"
   },
   "lint-staged": {
     "*.js": [
@@ -38,29 +55,19 @@
       "git add"
     ]
   },
-  "dependencies": {
-    "@material-ui/core": "^4.3.2",
-    "@material-ui/icons": "^4.2.1",
-    "axios": "^0.19.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-material-ui-form-validator": "^2.0.9",
-    "react-redux": "^7.1.0",
-    "react-router-dom": "^5.0.1",
-    "redux": "^4.0.4",
-    "redux-persist": "^5.10.0",
-    "redux-thunk": "^2.3.0"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "scripts": {
+    "prettier": "prettier \"{,**/}*.js\" --write",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "lint": "eslint .",
+    "eject": "react-scripts eject"
+  },
+  "author": "",
+  "license": "ISC"
 }
